@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,9 +19,17 @@ namespace _21point
         int startchack = 0;
         int p1card;
         int pcards = 2;
+        int ppoint;
+        int ppass = 0;
         int c1card;
+        int cpass = 0;
         int ccards = 2;
-        int nowdeck = 4;
+        int cpoint;
+        int nowdeck = 0;
+        int aa;
+        int bb;
+        int x;
+        Random Cchose = new Random();
         public Form1()
         {
             InitializeComponent();
@@ -82,21 +91,6 @@ namespace _21point
             list.Add(Resources._52);
             list.Add(Resources._00);
 
-           // this.p3.BackColor = Color.Transparent;
-           // this.p3.Parent = this.p2;
-            //this.p4.BackColor = Color.Transparent;
-           // this.p4.Parent = this.p3;
-           // this.p5.BackColor = Color.Transparent;
-           // this.p5.Parent = this.p4;
-          //  this.c3.BackColor = Color.Transparent;
-           // this.c3.Parent = this.c2;
-           // this.c4.BackColor = Color.Transparent;
-          //  this.c4.Parent = this.c3;
-           // this.c5.BackColor = Color.Transparent;
-          //  this.c5.Parent = this.c4;
-
-            Random Cchose = new Random();
-
             Random deck = new Random();
             for (int i = 0; i < 52; i++)
             {
@@ -116,6 +110,7 @@ namespace _21point
 
         private void start_Click(object sender, EventArgs e)
         {
+            nowdeck = 0;
             startchack = 1;
             test.Text = "";
             while(startchack == 1)
@@ -133,6 +128,12 @@ namespace _21point
                         }
                     }
                 }
+                aa = poker[0] % 13;
+                if (aa == 0)
+                    aa = 13;
+                bb = poker[1] % 13;
+                if (bb == 0)
+                    bb = 13;
                 p3.Image = null;
                 p4.Image = null;
                 p5.Image = null;
@@ -142,15 +143,19 @@ namespace _21point
                 pcards = 2;
                 ccards = 2;
                 p1.Image = list[52];
+                p1card = aa;
                 C1.Image = list[52];
-                p1card = poker[0];
-                c1card = poker[1];
-                p2.Image = list[poker[2]];
+                c1card = bb;
+                p1card = poker[nowdeck];
+                p2.Image = list[poker[nowdeck]];
                 this.Controls.Add(p2);
                 p2.BringToFront();
-                c2.Image = list[poker[3]];
+                nowdeck = nowdeck + 1;
+                c1card = poker[nowdeck];
+                c2.Image = list[poker[nowdeck]];
                 this.Controls.Add(c2);
                 c2.BringToFront();
+                nowdeck = nowdeck + 1;
 
                 startchack = 2;
                 break;
@@ -176,6 +181,18 @@ namespace _21point
                             this.Controls.Add(p3);
                             p3.BringToFront();
                             nowdeck = nowdeck + 1;
+                            x = Cchose.Next(1, 3);
+                            if(x == 1)
+                            {
+                                c3.Image = list[poker[nowdeck]];
+                                this.Controls.Add(c3);
+                                c3.BringToFront();
+                                nowdeck = nowdeck + 1;
+                            }
+                            if (x == 2)
+                            {
+                                cpass = 1;
+                            }
                             break;
                         }
                     case 4:
@@ -184,6 +201,18 @@ namespace _21point
                             this.Controls.Add(p4);
                             p4.BringToFront();
                             nowdeck = nowdeck + 1;
+                            x = Cchose.Next(1, 3);
+                            if (x == 1 && cpass ==0)
+                            {
+                                c4.Image = list[poker[nowdeck]];
+                                this.Controls.Add(c4);
+                                c4.BringToFront();
+                                nowdeck = nowdeck + 1;
+                            }
+                            if (x == 2)
+                            {
+                                cpass = 1;
+                            }
                             break;
                         }
                     case 5:
@@ -192,6 +221,18 @@ namespace _21point
                             this.Controls.Add(p5);
                             p5.BringToFront();
                             nowdeck = nowdeck + 1;
+                            x = Cchose.Next(1, 3);
+                            if (x == 1 && cpass == 0)
+                            {
+                                c5.Image = list[poker[nowdeck]];
+                                this.Controls.Add(c5);
+                                c5.BringToFront();
+                                nowdeck = nowdeck + 1;
+                            }
+                            if (x == 2)
+                            {
+                                cpass = 1;
+                            }
                             break;
                         }
                 }
