@@ -38,7 +38,7 @@
             this.c3 = new System.Windows.Forms.PictureBox();
             this.c4 = new System.Windows.Forms.PictureBox();
             this.c5 = new System.Windows.Forms.PictureBox();
-            this.deck = new System.Windows.Forms.PictureBox();
+            this.deckp = new System.Windows.Forms.PictureBox();
             this.pb1 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -52,7 +52,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.c3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.c4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.c5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deck)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deckp)).BeginInit();
             this.SuspendLayout();
             // 
             // p1
@@ -135,14 +135,14 @@
             this.c5.TabIndex = 9;
             this.c5.TabStop = false;
             // 
-            // deck
+            // deckp
             // 
-            this.deck.Location = new System.Drawing.Point(366, 105);
-            this.deck.Name = "deck";
-            this.deck.Size = new System.Drawing.Size(105, 150);
-            this.deck.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.deck.TabIndex = 10;
-            this.deck.TabStop = false;
+            this.deckp.Location = new System.Drawing.Point(366, 105);
+            this.deckp.Name = "deckp";
+            this.deckp.Size = new System.Drawing.Size(105, 150);
+            this.deckp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.deckp.TabIndex = 10;
+            this.deckp.TabStop = false;
             // 
             // pb1
             // 
@@ -178,11 +178,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(694, 448);
+            this.ClientSize = new System.Drawing.Size(568, 448);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pb1);
-            this.Controls.Add(this.deck);
+            this.Controls.Add(this.deckp);
             this.Controls.Add(this.c5);
             this.Controls.Add(this.c4);
             this.Controls.Add(this.c3);
@@ -206,7 +206,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.c3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.c4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.c5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deck)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deckp)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,7 +224,7 @@
         private System.Windows.Forms.PictureBox c3;
         private System.Windows.Forms.PictureBox c4;
         private System.Windows.Forms.PictureBox c5;
-        private System.Windows.Forms.PictureBox deck;
+        private System.Windows.Forms.PictureBox deckp;
         private System.Windows.Forms.Button pb1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
