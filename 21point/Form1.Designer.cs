@@ -40,8 +40,13 @@
             this.c5 = new System.Windows.Forms.PictureBox();
             this.deckp = new System.Windows.Forms.PictureBox();
             this.pb1 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.pb2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.start = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pb3 = new System.Windows.Forms.Button();
+            this.test = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.p1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.C1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.p2)).BeginInit();
@@ -57,87 +62,97 @@
             // 
             // p1
             // 
-            this.p1.Location = new System.Drawing.Point(54, 248);
+            this.p1.Location = new System.Drawing.Point(164, 245);
             this.p1.Name = "p1";
             this.p1.Size = new System.Drawing.Size(105, 150);
+            this.p1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.p1.TabIndex = 0;
             this.p1.TabStop = false;
             // 
             // C1
             // 
-            this.C1.Location = new System.Drawing.Point(203, 248);
+            this.C1.Location = new System.Drawing.Point(313, 245);
             this.C1.Name = "C1";
             this.C1.Size = new System.Drawing.Size(105, 150);
+            this.C1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.C1.TabIndex = 1;
             this.C1.TabStop = false;
             // 
             // p2
             // 
-            this.p2.Location = new System.Drawing.Point(54, 215);
+            this.p2.Location = new System.Drawing.Point(164, 212);
             this.p2.Name = "p2";
             this.p2.Size = new System.Drawing.Size(105, 150);
+            this.p2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.p2.TabIndex = 2;
             this.p2.TabStop = false;
             // 
             // p3
             // 
-            this.p3.Location = new System.Drawing.Point(54, 181);
+            this.p3.Location = new System.Drawing.Point(164, 178);
             this.p3.Name = "p3";
             this.p3.Size = new System.Drawing.Size(105, 150);
+            this.p3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.p3.TabIndex = 3;
             this.p3.TabStop = false;
             // 
             // p4
             // 
-            this.p4.Location = new System.Drawing.Point(54, 146);
+            this.p4.Location = new System.Drawing.Point(164, 143);
             this.p4.Name = "p4";
             this.p4.Size = new System.Drawing.Size(105, 150);
+            this.p4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.p4.TabIndex = 4;
             this.p4.TabStop = false;
             // 
             // p5
             // 
-            this.p5.Location = new System.Drawing.Point(54, 105);
+            this.p5.Location = new System.Drawing.Point(164, 102);
             this.p5.Name = "p5";
             this.p5.Size = new System.Drawing.Size(105, 150);
+            this.p5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.p5.TabIndex = 5;
             this.p5.TabStop = false;
             // 
             // c2
             // 
-            this.c2.Location = new System.Drawing.Point(203, 215);
+            this.c2.Location = new System.Drawing.Point(313, 212);
             this.c2.Name = "c2";
             this.c2.Size = new System.Drawing.Size(105, 150);
+            this.c2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.c2.TabIndex = 6;
             this.c2.TabStop = false;
             // 
             // c3
             // 
-            this.c3.Location = new System.Drawing.Point(203, 181);
+            this.c3.Location = new System.Drawing.Point(313, 178);
             this.c3.Name = "c3";
             this.c3.Size = new System.Drawing.Size(105, 150);
+            this.c3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.c3.TabIndex = 7;
             this.c3.TabStop = false;
             // 
             // c4
             // 
-            this.c4.Location = new System.Drawing.Point(203, 146);
+            this.c4.Location = new System.Drawing.Point(313, 143);
             this.c4.Name = "c4";
             this.c4.Size = new System.Drawing.Size(105, 150);
+            this.c4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.c4.TabIndex = 8;
             this.c4.TabStop = false;
             // 
             // c5
             // 
-            this.c5.Location = new System.Drawing.Point(203, 105);
+            this.c5.Location = new System.Drawing.Point(313, 102);
             this.c5.Name = "c5";
             this.c5.Size = new System.Drawing.Size(105, 150);
+            this.c5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.c5.TabIndex = 9;
             this.c5.TabStop = false;
             // 
             // deckp
             // 
-            this.deckp.Location = new System.Drawing.Point(366, 105);
+            this.deckp.Location = new System.Drawing.Point(456, 102);
             this.deckp.Name = "deckp";
             this.deckp.Size = new System.Drawing.Size(105, 150);
             this.deckp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -147,40 +162,99 @@
             // pb1
             // 
             this.pb1.Font = new System.Drawing.Font("新細明體", 16F);
-            this.pb1.Location = new System.Drawing.Point(366, 277);
+            this.pb1.Location = new System.Drawing.Point(19, 237);
             this.pb1.Name = "pb1";
             this.pb1.Size = new System.Drawing.Size(94, 41);
             this.pb1.TabIndex = 11;
             this.pb1.Text = "要牌";
             this.pb1.UseVisualStyleBackColor = true;
+            this.pb1.Click += new System.EventHandler(this.pb1_Click);
             // 
-            // button1
+            // pb2
             // 
-            this.button1.Font = new System.Drawing.Font("新細明體", 16F);
-            this.button1.Location = new System.Drawing.Point(366, 343);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 41);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "PASS";
-            this.button1.UseVisualStyleBackColor = true;
+            this.pb2.Font = new System.Drawing.Font("新細明體", 16F);
+            this.pb2.Location = new System.Drawing.Point(19, 309);
+            this.pb2.Name = "pb2";
+            this.pb2.Size = new System.Drawing.Size(94, 41);
+            this.pb2.TabIndex = 12;
+            this.pb2.Text = "PASS";
+            this.pb2.UseVisualStyleBackColor = true;
+            this.pb2.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("新細明體", 24F);
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(12, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(313, 40);
             this.label1.TabIndex = 13;
             this.label1.Text = "1對1 21點 模擬器";
             // 
+            // start
+            // 
+            this.start.Font = new System.Drawing.Font("新細明體", 16F);
+            this.start.Location = new System.Drawing.Point(19, 102);
+            this.start.Name = "start";
+            this.start.Size = new System.Drawing.Size(99, 106);
+            this.start.TabIndex = 14;
+            this.start.Text = "開始/重新一局";
+            this.start.UseVisualStyleBackColor = true;
+            this.start.Click += new System.EventHandler(this.start_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("新細明體", 16F);
+            this.label2.Location = new System.Drawing.Point(183, 411);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(66, 27);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "玩家";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("新細明體", 16F);
+            this.label3.Location = new System.Drawing.Point(334, 411);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(66, 27);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "電腦";
+            // 
+            // pb3
+            // 
+            this.pb3.Font = new System.Drawing.Font("新細明體", 16F);
+            this.pb3.Location = new System.Drawing.Point(19, 397);
+            this.pb3.Name = "pb3";
+            this.pb3.Size = new System.Drawing.Size(94, 41);
+            this.pb3.TabIndex = 17;
+            this.pb3.Text = "底牌";
+            this.pb3.UseVisualStyleBackColor = true;
+            this.pb3.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // test
+            // 
+            this.test.AutoSize = true;
+            this.test.Font = new System.Drawing.Font("新細明體", 30F);
+            this.test.Location = new System.Drawing.Point(155, 454);
+            this.test.Name = "test";
+            this.test.Size = new System.Drawing.Size(35, 50);
+            this.test.TabIndex = 18;
+            this.test.Text = "t";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(568, 448);
+            this.ClientSize = new System.Drawing.Size(623, 513);
+            this.Controls.Add(this.test);
+            this.Controls.Add(this.pb3);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.start);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.pb2);
             this.Controls.Add(this.pb1);
             this.Controls.Add(this.deckp);
             this.Controls.Add(this.c5);
@@ -226,8 +300,13 @@
         private System.Windows.Forms.PictureBox c5;
         private System.Windows.Forms.PictureBox deckp;
         private System.Windows.Forms.Button pb1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button pb2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button start;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button pb3;
+        private System.Windows.Forms.Label test;
     }
 }
 
