@@ -17,19 +17,6 @@ namespace _21point
         List<Image> list = new List<Image>();
         int [] poker = new int [52];
         int startchack = 0;
-        int p1card;
-        int pcards = 2;
-        int ppoint;
-        int ppass = 0;
-        int c1card;
-        int cpass = 0;
-        int ccards = 2;
-        int cpoint;
-        int nowdeck = 0;
-        int aa;
-        int bb;
-        int x;
-        Random Cchose = new Random();
         public Form1()
         {
             InitializeComponent();
@@ -110,162 +97,57 @@ namespace _21point
 
         private void start_Click(object sender, EventArgs e)
         {
-            nowdeck = 0;
             startchack = 1;
             test.Text = "";
-            while(startchack == 1)
-            {
-                Random deck = new Random();
-                for (int i = 0; i < 52; i++)
-                {
-                    poker[i] = deck.Next(0, 52);
-                    for (int j = 0; j < i; j++)
-                    {
-                        while (poker[j] == poker[i])
-                        {
-                            j = 0;
-                            poker[i] = deck.Next(0, 52);
-                        }
-                    }
-                }
-                aa = poker[0] % 13;
-                if (aa == 0)
-                    aa = 13;
-                bb = poker[1] % 13;
-                if (bb == 0)
-                    bb = 13;
-                p3.Image = null;
-                p4.Image = null;
-                p5.Image = null;
-                c3.Image = null;
-                c4.Image = null;
-                c5.Image = null;
-                pcards = 2;
-                ccards = 2;
-                p1.Image = list[52];
-                p1card = aa;
-                C1.Image = list[52];
-                c1card = bb;
-                p1card = poker[nowdeck];
-                p2.Image = list[poker[nowdeck]];
-                this.Controls.Add(p2);
-                p2.BringToFront();
-                nowdeck = nowdeck + 1;
-                c1card = poker[nowdeck];
-                c2.Image = list[poker[nowdeck]];
-                this.Controls.Add(c2);
-                c2.BringToFront();
-                nowdeck = nowdeck + 1;
-
-                startchack = 2;
-                break;
-            }
         }
-
         private void pb1_Click(object sender, EventArgs e)
         {
-            while (startchack == 0)
+            switch (startchack)
             {
-                test.Text = "請先按開始";
-                break;
-            }
-            while (startchack == 2)
-            {
-                test.Text = "";
-                pcards = pcards + 1;
-                switch (pcards)
-                {
-                    case 3:
-                        {
-                            p3.Image = list[poker[nowdeck]];
-                            this.Controls.Add(p3);
-                            p3.BringToFront();
-                            nowdeck = nowdeck + 1;
-                            x = Cchose.Next(1, 3);
-                            if(x == 1)
-                            {
-                                c3.Image = list[poker[nowdeck]];
-                                this.Controls.Add(c3);
-                                c3.BringToFront();
-                                nowdeck = nowdeck + 1;
-                            }
-                            if (x == 2)
-                            {
-                                cpass = 1;
-                            }
-                            break;
-                        }
-                    case 4:
-                        {
-                            p4.Image = list[poker[nowdeck]];
-                            this.Controls.Add(p4);
-                            p4.BringToFront();
-                            nowdeck = nowdeck + 1;
-                            x = Cchose.Next(1, 3);
-                            if (x == 1 && cpass ==0)
-                            {
-                                c4.Image = list[poker[nowdeck]];
-                                this.Controls.Add(c4);
-                                c4.BringToFront();
-                                nowdeck = nowdeck + 1;
-                            }
-                            if (x == 2)
-                            {
-                                cpass = 1;
-                            }
-                            break;
-                        }
-                    case 5:
-                        {
-                            p5.Image = list[poker[nowdeck]];
-                            this.Controls.Add(p5);
-                            p5.BringToFront();
-                            nowdeck = nowdeck + 1;
-                            x = Cchose.Next(1, 3);
-                            if (x == 1 && cpass == 0)
-                            {
-                                c5.Image = list[poker[nowdeck]];
-                                this.Controls.Add(c5);
-                                c5.BringToFront();
-                                nowdeck = nowdeck + 1;
-                            }
-                            if (x == 2)
-                            {
-                                cpass = 1;
-                            }
-                            break;
-                        }
-                }
-                break;
+                case 0:
+                    {
+                        test.Text = "請先按開始";
+                        break;
+                    }
+                case 1:
+                    {
+
+                        break;
+                    }
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            while (startchack == 0)
+            switch (startchack)
             {
-                test.Text = "請先按開始";
-                break;
-            }
-            while (startchack == 2)
-            {
-                test.Text = "";
-                break;
+                case 0:
+                    {
+                        test.Text = "請先按開始";
+                        break;
+                    }
+                case 1:
+                    {
+
+                        break;
+                    }
             }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            while (startchack == 0)
+            switch (startchack)
             {
-                test.Text = "請先按開始";
-                break;
-            }
-            while (startchack == 2)
-            {
-                test.Text = "";
-                MessageBox.Show($"{p1card % 13}", "你的底牌", MessageBoxButtons.OK);
-                break;
+                case 0:
+                    {
+                        test.Text = "請先按開始";
+                        break;
+                    }
+                case 1:
+                    {
+
+                        break;
+                    }
             }
         }
     }

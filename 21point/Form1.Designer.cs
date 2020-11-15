@@ -62,7 +62,8 @@
             // 
             // p1
             // 
-            this.p1.Location = new System.Drawing.Point(164, 245);
+            this.p1.Location = new System.Drawing.Point(142, 176);
+            this.p1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.p1.Name = "p1";
             this.p1.Size = new System.Drawing.Size(105, 150);
             this.p1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -71,7 +72,8 @@
             // 
             // C1
             // 
-            this.C1.Location = new System.Drawing.Point(313, 245);
+            this.C1.Location = new System.Drawing.Point(277, 176);
+            this.C1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.C1.Name = "C1";
             this.C1.Size = new System.Drawing.Size(105, 150);
             this.C1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -80,7 +82,8 @@
             // 
             // p2
             // 
-            this.p2.Location = new System.Drawing.Point(164, 212);
+            this.p2.Location = new System.Drawing.Point(142, 143);
+            this.p2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.p2.Name = "p2";
             this.p2.Size = new System.Drawing.Size(105, 150);
             this.p2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -89,7 +92,8 @@
             // 
             // p3
             // 
-            this.p3.Location = new System.Drawing.Point(164, 178);
+            this.p3.Location = new System.Drawing.Point(142, 108);
+            this.p3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.p3.Name = "p3";
             this.p3.Size = new System.Drawing.Size(105, 150);
             this.p3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -98,7 +102,8 @@
             // 
             // p4
             // 
-            this.p4.Location = new System.Drawing.Point(164, 143);
+            this.p4.Location = new System.Drawing.Point(142, 75);
+            this.p4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.p4.Name = "p4";
             this.p4.Size = new System.Drawing.Size(105, 150);
             this.p4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -107,7 +112,8 @@
             // 
             // p5
             // 
-            this.p5.Location = new System.Drawing.Point(164, 102);
+            this.p5.Location = new System.Drawing.Point(142, 44);
+            this.p5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.p5.Name = "p5";
             this.p5.Size = new System.Drawing.Size(105, 150);
             this.p5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -116,7 +122,8 @@
             // 
             // c2
             // 
-            this.c2.Location = new System.Drawing.Point(313, 212);
+            this.c2.Location = new System.Drawing.Point(277, 143);
+            this.c2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.c2.Name = "c2";
             this.c2.Size = new System.Drawing.Size(105, 150);
             this.c2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -125,7 +132,8 @@
             // 
             // c3
             // 
-            this.c3.Location = new System.Drawing.Point(313, 178);
+            this.c3.Location = new System.Drawing.Point(277, 108);
+            this.c3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.c3.Name = "c3";
             this.c3.Size = new System.Drawing.Size(105, 150);
             this.c3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -134,7 +142,8 @@
             // 
             // c4
             // 
-            this.c4.Location = new System.Drawing.Point(313, 143);
+            this.c4.Location = new System.Drawing.Point(277, 75);
+            this.c4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.c4.Name = "c4";
             this.c4.Size = new System.Drawing.Size(105, 150);
             this.c4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -143,7 +152,8 @@
             // 
             // c5
             // 
-            this.c5.Location = new System.Drawing.Point(313, 102);
+            this.c5.Location = new System.Drawing.Point(277, 44);
+            this.c5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.c5.Name = "c5";
             this.c5.Size = new System.Drawing.Size(105, 150);
             this.c5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -152,7 +162,8 @@
             // 
             // deckp
             // 
-            this.deckp.Location = new System.Drawing.Point(456, 102);
+            this.deckp.Location = new System.Drawing.Point(11, 134);
+            this.deckp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.deckp.Name = "deckp";
             this.deckp.Size = new System.Drawing.Size(105, 150);
             this.deckp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -162,9 +173,10 @@
             // pb1
             // 
             this.pb1.Font = new System.Drawing.Font("新細明體", 16F);
-            this.pb1.Location = new System.Drawing.Point(19, 237);
+            this.pb1.Location = new System.Drawing.Point(368, 372);
+            this.pb1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pb1.Name = "pb1";
-            this.pb1.Size = new System.Drawing.Size(94, 41);
+            this.pb1.Size = new System.Drawing.Size(88, 48);
             this.pb1.TabIndex = 11;
             this.pb1.Text = "要牌";
             this.pb1.UseVisualStyleBackColor = true;
@@ -173,9 +185,10 @@
             // pb2
             // 
             this.pb2.Font = new System.Drawing.Font("新細明體", 16F);
-            this.pb2.Location = new System.Drawing.Point(19, 309);
+            this.pb2.Location = new System.Drawing.Point(460, 372);
+            this.pb2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pb2.Name = "pb2";
-            this.pb2.Size = new System.Drawing.Size(94, 41);
+            this.pb2.Size = new System.Drawing.Size(88, 48);
             this.pb2.TabIndex = 12;
             this.pb2.Text = "PASS";
             this.pb2.UseVisualStyleBackColor = true;
@@ -185,18 +198,20 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("新細明體", 24F);
-            this.label1.Location = new System.Drawing.Point(12, 18);
+            this.label1.Location = new System.Drawing.Point(9, 14);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(313, 40);
+            this.label1.Size = new System.Drawing.Size(77, 32);
             this.label1.TabIndex = 13;
-            this.label1.Text = "1對1 21點 模擬器";
+            this.label1.Text = "21點";
             // 
             // start
             // 
             this.start.Font = new System.Drawing.Font("新細明體", 16F);
-            this.start.Location = new System.Drawing.Point(19, 102);
+            this.start.Location = new System.Drawing.Point(11, 335);
+            this.start.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.start.Name = "start";
-            this.start.Size = new System.Drawing.Size(99, 106);
+            this.start.Size = new System.Drawing.Size(74, 85);
             this.start.TabIndex = 14;
             this.start.Text = "開始/重新一局";
             this.start.UseVisualStyleBackColor = true;
@@ -206,9 +221,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("新細明體", 16F);
-            this.label2.Location = new System.Drawing.Point(183, 411);
+            this.label2.Location = new System.Drawing.Point(163, 337);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 27);
+            this.label2.Size = new System.Drawing.Size(54, 22);
             this.label2.TabIndex = 15;
             this.label2.Text = "玩家";
             // 
@@ -216,18 +232,20 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("新細明體", 16F);
-            this.label3.Location = new System.Drawing.Point(334, 411);
+            this.label3.Location = new System.Drawing.Point(304, 337);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 27);
+            this.label3.Size = new System.Drawing.Size(54, 22);
             this.label3.TabIndex = 16;
             this.label3.Text = "電腦";
             // 
             // pb3
             // 
             this.pb3.Font = new System.Drawing.Font("新細明體", 16F);
-            this.pb3.Location = new System.Drawing.Point(19, 397);
+            this.pb3.Location = new System.Drawing.Point(460, 320);
+            this.pb3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pb3.Name = "pb3";
-            this.pb3.Size = new System.Drawing.Size(94, 41);
+            this.pb3.Size = new System.Drawing.Size(88, 48);
             this.pb3.TabIndex = 17;
             this.pb3.Text = "底牌";
             this.pb3.UseVisualStyleBackColor = true;
@@ -237,17 +255,18 @@
             // 
             this.test.AutoSize = true;
             this.test.Font = new System.Drawing.Font("新細明體", 30F);
-            this.test.Location = new System.Drawing.Point(155, 454);
+            this.test.Location = new System.Drawing.Point(136, 371);
+            this.test.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.test.Name = "test";
-            this.test.Size = new System.Drawing.Size(35, 50);
+            this.test.Size = new System.Drawing.Size(217, 40);
             this.test.TabIndex = 18;
-            this.test.Text = "t";
+            this.test.Text = "請先按開始";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(623, 513);
+            this.ClientSize = new System.Drawing.Size(559, 431);
             this.Controls.Add(this.test);
             this.Controls.Add(this.pb3);
             this.Controls.Add(this.label3);
@@ -267,6 +286,7 @@
             this.Controls.Add(this.p2);
             this.Controls.Add(this.C1);
             this.Controls.Add(this.p1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
