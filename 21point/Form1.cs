@@ -20,8 +20,10 @@ namespace _21point
         int startchack = 0;
         int p1card;
         int c1card;
-        int hanairo;
-        int totalpoint;
+        int pointchack;
+        int nowdeck = 4;
+        int ppoint;
+        int cpoint;
         public Form1()
         {
             InitializeComponent();
@@ -121,6 +123,12 @@ namespace _21point
                     }
                 case 1:
                     {
+                        p3.Image = null;
+                        p4.Image = null;
+                        p5.Image = null;
+                        c3.Image = null;
+                        c4.Image = null;
+                        c5.Image = null;
                         for (int i = 0; i < 52; i++)
                         {
                             poker[i] = deck.Next(0, 52);
@@ -158,7 +166,27 @@ namespace _21point
                     }
                 case 1:
                     {
-
+                        int handcards = 2;
+                        switch (handcards)
+                        {
+                            case 2:
+                                {
+                                    p3.Image = list[poker[nowdeck]];
+                                    this.Controls.Add(p3);
+                                    p3.BringToFront();
+                                    nowdeck += 1;
+                                    handcards += 1;
+                                    break;
+                                }
+                            case 3:
+                                {
+                                    break;
+                                }
+                            case 4:
+                                {
+                                    break;
+                                }
+                        }
                         break;
                     }
             }
