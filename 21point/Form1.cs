@@ -15,8 +15,13 @@ namespace _21point
     public partial class Form1 : Form
     {
         List<Image> list = new List<Image>();
+        Random deck = new Random();
         int [] poker = new int [52];
         int startchack = 0;
+        int p1card;
+        int c1card;
+        int hanairo;
+        int totalpoint;
         public Form1()
         {
             InitializeComponent();
@@ -78,7 +83,6 @@ namespace _21point
             list.Add(Resources._52);
             list.Add(Resources._00);
 
-            Random deck = new Random();
             for (int i = 0; i < 52; i++)
             {
                 poker[i] = deck.Next(0, 52);
@@ -97,10 +101,53 @@ namespace _21point
 
         private void start_Click(object sender, EventArgs e)
         {
-            startchack = 1;
-            test.Text = "";
+            switch (startchack)
+            {
+                case 0:
+                    {
+                        test.Text = "";
+                        p1.Image = list[52];
+                        p1card = poker[0];
+                        c1.Image = list[52];
+                        c1card = poker[1];
+                        p2.Image = list[poker[2]];
+                        this.Controls.Add(p2);
+                        p2.BringToFront();
+                        c2.Image = list[poker[3]];
+                        this.Controls.Add(c2);
+                        c2.BringToFront();
+                        startchack = 1;
+                        break;
+                    }
+                case 1:
+                    {
+                        for (int i = 0; i < 52; i++)
+                        {
+                            poker[i] = deck.Next(0, 52);
+                            for (int j = 0; j < i; j++)
+                            {
+                                while (poker[j] == poker[i])
+                                {
+                                    j = 0;
+                                    poker[i] = deck.Next(0, 52);
+                                }
+                            }
+                        }
+                        p1card = poker[0];
+                        p2.Image = list[poker[2]];
+                        this.Controls.Add(p2);
+                        p2.BringToFront();
+                        c1card = poker[1];
+                        c2.Image = list[poker[3]];
+                        this.Controls.Add(c2);
+                        c2.BringToFront();
+                        break;
+                    }
+            }
+
         }
-        private void pb1_Click(object sender, EventArgs e)
+
+        private void bt1_Click(object sender, EventArgs e)
         {
             switch (startchack)
             {
@@ -117,7 +164,7 @@ namespace _21point
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void bt2_Click(object sender, EventArgs e)
         {
             switch (startchack)
             {
@@ -134,7 +181,7 @@ namespace _21point
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void bt3_Click(object sender, EventArgs e)
         {
             switch (startchack)
             {

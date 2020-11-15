@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.p1 = new System.Windows.Forms.PictureBox();
-            this.C1 = new System.Windows.Forms.PictureBox();
+            this.c1 = new System.Windows.Forms.PictureBox();
             this.p2 = new System.Windows.Forms.PictureBox();
             this.p3 = new System.Windows.Forms.PictureBox();
             this.p4 = new System.Windows.Forms.PictureBox();
@@ -39,16 +39,16 @@
             this.c4 = new System.Windows.Forms.PictureBox();
             this.c5 = new System.Windows.Forms.PictureBox();
             this.deckp = new System.Windows.Forms.PictureBox();
-            this.pb1 = new System.Windows.Forms.Button();
-            this.pb2 = new System.Windows.Forms.Button();
+            this.bt1 = new System.Windows.Forms.Button();
+            this.bt2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.start = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.pb3 = new System.Windows.Forms.Button();
+            this.bt3 = new System.Windows.Forms.Button();
             this.test = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.p1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.C1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.c1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.p2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.p3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.p4)).BeginInit();
@@ -63,27 +63,27 @@
             // p1
             // 
             this.p1.Location = new System.Drawing.Point(142, 176);
-            this.p1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.p1.Margin = new System.Windows.Forms.Padding(2);
             this.p1.Name = "p1";
             this.p1.Size = new System.Drawing.Size(105, 150);
             this.p1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.p1.TabIndex = 0;
             this.p1.TabStop = false;
             // 
-            // C1
+            // c1
             // 
-            this.C1.Location = new System.Drawing.Point(277, 176);
-            this.C1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.C1.Name = "C1";
-            this.C1.Size = new System.Drawing.Size(105, 150);
-            this.C1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.C1.TabIndex = 1;
-            this.C1.TabStop = false;
+            this.c1.Location = new System.Drawing.Point(277, 176);
+            this.c1.Margin = new System.Windows.Forms.Padding(2);
+            this.c1.Name = "c1";
+            this.c1.Size = new System.Drawing.Size(105, 150);
+            this.c1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.c1.TabIndex = 1;
+            this.c1.TabStop = false;
             // 
             // p2
             // 
             this.p2.Location = new System.Drawing.Point(142, 143);
-            this.p2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.p2.Margin = new System.Windows.Forms.Padding(2);
             this.p2.Name = "p2";
             this.p2.Size = new System.Drawing.Size(105, 150);
             this.p2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -93,7 +93,7 @@
             // p3
             // 
             this.p3.Location = new System.Drawing.Point(142, 108);
-            this.p3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.p3.Margin = new System.Windows.Forms.Padding(2);
             this.p3.Name = "p3";
             this.p3.Size = new System.Drawing.Size(105, 150);
             this.p3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -103,7 +103,7 @@
             // p4
             // 
             this.p4.Location = new System.Drawing.Point(142, 75);
-            this.p4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.p4.Margin = new System.Windows.Forms.Padding(2);
             this.p4.Name = "p4";
             this.p4.Size = new System.Drawing.Size(105, 150);
             this.p4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -113,7 +113,7 @@
             // p5
             // 
             this.p5.Location = new System.Drawing.Point(142, 44);
-            this.p5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.p5.Margin = new System.Windows.Forms.Padding(2);
             this.p5.Name = "p5";
             this.p5.Size = new System.Drawing.Size(105, 150);
             this.p5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -123,7 +123,7 @@
             // c2
             // 
             this.c2.Location = new System.Drawing.Point(277, 143);
-            this.c2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.c2.Margin = new System.Windows.Forms.Padding(2);
             this.c2.Name = "c2";
             this.c2.Size = new System.Drawing.Size(105, 150);
             this.c2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -133,7 +133,7 @@
             // c3
             // 
             this.c3.Location = new System.Drawing.Point(277, 108);
-            this.c3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.c3.Margin = new System.Windows.Forms.Padding(2);
             this.c3.Name = "c3";
             this.c3.Size = new System.Drawing.Size(105, 150);
             this.c3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -143,7 +143,7 @@
             // c4
             // 
             this.c4.Location = new System.Drawing.Point(277, 75);
-            this.c4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.c4.Margin = new System.Windows.Forms.Padding(2);
             this.c4.Name = "c4";
             this.c4.Size = new System.Drawing.Size(105, 150);
             this.c4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -153,7 +153,7 @@
             // c5
             // 
             this.c5.Location = new System.Drawing.Point(277, 44);
-            this.c5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.c5.Margin = new System.Windows.Forms.Padding(2);
             this.c5.Name = "c5";
             this.c5.Size = new System.Drawing.Size(105, 150);
             this.c5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -163,36 +163,36 @@
             // deckp
             // 
             this.deckp.Location = new System.Drawing.Point(11, 134);
-            this.deckp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.deckp.Margin = new System.Windows.Forms.Padding(2);
             this.deckp.Name = "deckp";
             this.deckp.Size = new System.Drawing.Size(105, 150);
             this.deckp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.deckp.TabIndex = 10;
             this.deckp.TabStop = false;
             // 
-            // pb1
+            // bt1
             // 
-            this.pb1.Font = new System.Drawing.Font("新細明體", 16F);
-            this.pb1.Location = new System.Drawing.Point(368, 372);
-            this.pb1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pb1.Name = "pb1";
-            this.pb1.Size = new System.Drawing.Size(88, 48);
-            this.pb1.TabIndex = 11;
-            this.pb1.Text = "要牌";
-            this.pb1.UseVisualStyleBackColor = true;
-            this.pb1.Click += new System.EventHandler(this.pb1_Click);
+            this.bt1.Font = new System.Drawing.Font("新細明體", 16F);
+            this.bt1.Location = new System.Drawing.Point(368, 372);
+            this.bt1.Margin = new System.Windows.Forms.Padding(2);
+            this.bt1.Name = "bt1";
+            this.bt1.Size = new System.Drawing.Size(88, 48);
+            this.bt1.TabIndex = 11;
+            this.bt1.Text = "要牌";
+            this.bt1.UseVisualStyleBackColor = true;
+            this.bt1.Click += new System.EventHandler(this.bt1_Click);
             // 
-            // pb2
+            // bt2
             // 
-            this.pb2.Font = new System.Drawing.Font("新細明體", 16F);
-            this.pb2.Location = new System.Drawing.Point(460, 372);
-            this.pb2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pb2.Name = "pb2";
-            this.pb2.Size = new System.Drawing.Size(88, 48);
-            this.pb2.TabIndex = 12;
-            this.pb2.Text = "PASS";
-            this.pb2.UseVisualStyleBackColor = true;
-            this.pb2.Click += new System.EventHandler(this.button1_Click);
+            this.bt2.Font = new System.Drawing.Font("新細明體", 16F);
+            this.bt2.Location = new System.Drawing.Point(460, 372);
+            this.bt2.Margin = new System.Windows.Forms.Padding(2);
+            this.bt2.Name = "bt2";
+            this.bt2.Size = new System.Drawing.Size(88, 48);
+            this.bt2.TabIndex = 12;
+            this.bt2.Text = "PASS";
+            this.bt2.UseVisualStyleBackColor = true;
+            this.bt2.Click += new System.EventHandler(this.bt2_Click);
             // 
             // label1
             // 
@@ -209,7 +209,7 @@
             // 
             this.start.Font = new System.Drawing.Font("新細明體", 16F);
             this.start.Location = new System.Drawing.Point(11, 335);
-            this.start.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.start.Margin = new System.Windows.Forms.Padding(2);
             this.start.Name = "start";
             this.start.Size = new System.Drawing.Size(74, 85);
             this.start.TabIndex = 14;
@@ -239,17 +239,17 @@
             this.label3.TabIndex = 16;
             this.label3.Text = "電腦";
             // 
-            // pb3
+            // bt3
             // 
-            this.pb3.Font = new System.Drawing.Font("新細明體", 16F);
-            this.pb3.Location = new System.Drawing.Point(460, 320);
-            this.pb3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pb3.Name = "pb3";
-            this.pb3.Size = new System.Drawing.Size(88, 48);
-            this.pb3.TabIndex = 17;
-            this.pb3.Text = "底牌";
-            this.pb3.UseVisualStyleBackColor = true;
-            this.pb3.Click += new System.EventHandler(this.button2_Click);
+            this.bt3.Font = new System.Drawing.Font("新細明體", 16F);
+            this.bt3.Location = new System.Drawing.Point(460, 320);
+            this.bt3.Margin = new System.Windows.Forms.Padding(2);
+            this.bt3.Name = "bt3";
+            this.bt3.Size = new System.Drawing.Size(88, 48);
+            this.bt3.TabIndex = 17;
+            this.bt3.Text = "底牌";
+            this.bt3.UseVisualStyleBackColor = true;
+            this.bt3.Click += new System.EventHandler(this.bt3_Click);
             // 
             // test
             // 
@@ -268,13 +268,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(559, 431);
             this.Controls.Add(this.test);
-            this.Controls.Add(this.pb3);
+            this.Controls.Add(this.bt3);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.start);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pb2);
-            this.Controls.Add(this.pb1);
+            this.Controls.Add(this.bt2);
+            this.Controls.Add(this.bt1);
             this.Controls.Add(this.deckp);
             this.Controls.Add(this.c5);
             this.Controls.Add(this.c4);
@@ -284,14 +284,14 @@
             this.Controls.Add(this.p4);
             this.Controls.Add(this.p3);
             this.Controls.Add(this.p2);
-            this.Controls.Add(this.C1);
+            this.Controls.Add(this.c1);
             this.Controls.Add(this.p1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "21點";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.p1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.C1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.c1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.p2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.p3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.p4)).EndInit();
@@ -309,7 +309,7 @@
         #endregion
 
         private System.Windows.Forms.PictureBox p1;
-        private System.Windows.Forms.PictureBox C1;
+        private System.Windows.Forms.PictureBox c1;
         private System.Windows.Forms.PictureBox p2;
         private System.Windows.Forms.PictureBox p3;
         private System.Windows.Forms.PictureBox p4;
@@ -319,13 +319,13 @@
         private System.Windows.Forms.PictureBox c4;
         private System.Windows.Forms.PictureBox c5;
         private System.Windows.Forms.PictureBox deckp;
-        private System.Windows.Forms.Button pb1;
-        private System.Windows.Forms.Button pb2;
+        private System.Windows.Forms.Button bt1;
+        private System.Windows.Forms.Button bt2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button start;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button pb3;
+        private System.Windows.Forms.Button bt3;
         private System.Windows.Forms.Label test;
     }
 }
