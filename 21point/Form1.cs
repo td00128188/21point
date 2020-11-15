@@ -20,15 +20,15 @@ namespace _21point
         int startchack = 0;
         int p1card;
         int c1card;
-        int pointchack;
-        int nowdeck = 4;
-        int ppoint;
-        int cpoint;
+        int nowdeck = 0;
+        int ppoint = 0;
+        int cpoint = 0;
+        int handcards = 2;
+        // 能要牌 要牌機制要做
         public Form1()
         {
             InitializeComponent();
         }
-
         private void Form1_Load(object sender, EventArgs e)
         {
             list.Add(Resources._1);
@@ -109,13 +109,17 @@ namespace _21point
                     {
                         test.Text = "";
                         p1.Image = list[52];
-                        p1card = poker[0];
                         c1.Image = list[52];
-                        c1card = poker[1];
-                        p2.Image = list[poker[2]];
+                        p1card = poker[nowdeck];
+                        nowdeck += 1;                        
+                        c1card = poker[nowdeck];
+                        nowdeck += 1;
+                        p2.Image = list[poker[nowdeck]];
+                        nowdeck += 1;
                         this.Controls.Add(p2);
                         p2.BringToFront();
-                        c2.Image = list[poker[3]];
+                        c2.Image = list[poker[nowdeck]];
+                        nowdeck += 1;
                         this.Controls.Add(c2);
                         c2.BringToFront();
                         startchack = 1;
@@ -123,6 +127,10 @@ namespace _21point
                     }
                 case 1:
                     {
+                        ppoint = 0;
+                        cpoint = 0;
+                        nowdeck = 0;
+                        handcards = 2;
                         p3.Image = null;
                         p4.Image = null;
                         p5.Image = null;
@@ -141,12 +149,16 @@ namespace _21point
                                 }
                             }
                         }
-                        p1card = poker[0];
-                        p2.Image = list[poker[2]];
+                        p1card = poker[nowdeck];
+                        nowdeck += 1;
+                        c1card = poker[nowdeck];
+                        nowdeck += 1;
+                        p2.Image = list[poker[nowdeck]];
+                        nowdeck += 1;
                         this.Controls.Add(p2);
                         p2.BringToFront();
-                        c1card = poker[1];
-                        c2.Image = list[poker[3]];
+                        c2.Image = list[poker[nowdeck]];
+                        nowdeck += 1;
                         this.Controls.Add(c2);
                         c2.BringToFront();
                         break;
@@ -166,7 +178,6 @@ namespace _21point
                     }
                 case 1:
                     {
-                        int handcards = 2;
                         switch (handcards)
                         {
                             case 2:
@@ -180,10 +191,20 @@ namespace _21point
                                 }
                             case 3:
                                 {
+                                    p4.Image = list[poker[nowdeck]];
+                                    this.Controls.Add(p4);
+                                    p4.BringToFront();
+                                    nowdeck += 1;
+                                    handcards += 1;
                                     break;
                                 }
                             case 4:
                                 {
+                                    p5.Image = list[poker[nowdeck]];
+                                    this.Controls.Add(p5);
+                                    p5.BringToFront();
+                                    nowdeck += 1;
+                                    handcards += 1;
                                     break;
                                 }
                         }
