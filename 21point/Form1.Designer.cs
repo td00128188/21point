@@ -62,7 +62,7 @@
             // 
             // p1
             // 
-            this.p1.Location = new System.Drawing.Point(142, 176);
+            this.p1.Location = new System.Drawing.Point(142, 185);
             this.p1.Margin = new System.Windows.Forms.Padding(2);
             this.p1.Name = "p1";
             this.p1.Size = new System.Drawing.Size(105, 150);
@@ -72,7 +72,7 @@
             // 
             // c1
             // 
-            this.c1.Location = new System.Drawing.Point(277, 176);
+            this.c1.Location = new System.Drawing.Point(277, 185);
             this.c1.Margin = new System.Windows.Forms.Padding(2);
             this.c1.Name = "c1";
             this.c1.Size = new System.Drawing.Size(105, 150);
@@ -82,7 +82,7 @@
             // 
             // p2
             // 
-            this.p2.Location = new System.Drawing.Point(142, 143);
+            this.p2.Location = new System.Drawing.Point(142, 147);
             this.p2.Margin = new System.Windows.Forms.Padding(2);
             this.p2.Name = "p2";
             this.p2.Size = new System.Drawing.Size(105, 150);
@@ -102,7 +102,7 @@
             // 
             // p4
             // 
-            this.p4.Location = new System.Drawing.Point(142, 75);
+            this.p4.Location = new System.Drawing.Point(142, 71);
             this.p4.Margin = new System.Windows.Forms.Padding(2);
             this.p4.Name = "p4";
             this.p4.Size = new System.Drawing.Size(105, 150);
@@ -112,7 +112,7 @@
             // 
             // p5
             // 
-            this.p5.Location = new System.Drawing.Point(142, 44);
+            this.p5.Location = new System.Drawing.Point(142, 31);
             this.p5.Margin = new System.Windows.Forms.Padding(2);
             this.p5.Name = "p5";
             this.p5.Size = new System.Drawing.Size(105, 150);
@@ -122,7 +122,7 @@
             // 
             // c2
             // 
-            this.c2.Location = new System.Drawing.Point(277, 143);
+            this.c2.Location = new System.Drawing.Point(277, 147);
             this.c2.Margin = new System.Windows.Forms.Padding(2);
             this.c2.Name = "c2";
             this.c2.Size = new System.Drawing.Size(105, 150);
@@ -142,7 +142,7 @@
             // 
             // c4
             // 
-            this.c4.Location = new System.Drawing.Point(277, 75);
+            this.c4.Location = new System.Drawing.Point(277, 71);
             this.c4.Margin = new System.Windows.Forms.Padding(2);
             this.c4.Name = "c4";
             this.c4.Size = new System.Drawing.Size(105, 150);
@@ -152,7 +152,7 @@
             // 
             // c5
             // 
-            this.c5.Location = new System.Drawing.Point(277, 44);
+            this.c5.Location = new System.Drawing.Point(277, 31);
             this.c5.Margin = new System.Windows.Forms.Padding(2);
             this.c5.Name = "c5";
             this.c5.Size = new System.Drawing.Size(105, 150);
@@ -221,7 +221,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("新細明體", 16F);
-            this.label2.Location = new System.Drawing.Point(163, 337);
+            this.label2.Location = new System.Drawing.Point(163, 344);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 22);
@@ -232,7 +232,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("新細明體", 16F);
-            this.label3.Location = new System.Drawing.Point(304, 337);
+            this.label3.Location = new System.Drawing.Point(304, 344);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(54, 22);
@@ -255,7 +255,7 @@
             // 
             this.test.AutoSize = true;
             this.test.Font = new System.Drawing.Font("新細明體", 30F);
-            this.test.Location = new System.Drawing.Point(136, 371);
+            this.test.Location = new System.Drawing.Point(141, 380);
             this.test.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.test.Name = "test";
             this.test.Size = new System.Drawing.Size(217, 40);

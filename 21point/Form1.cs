@@ -24,7 +24,6 @@ namespace _21point
         int ppoint = 0;
         int cpoint = 0;
         int handcards = 2;
-        // 能要牌 要牌機制要做 
         public Form1()
         {
             InitializeComponent();
@@ -241,7 +240,45 @@ namespace _21point
                     }
                 case 1:
                     {
-
+                        p1.Image = list[p1card];
+                        int hanairo;
+                        int point;
+                        hanairo = (p1card + 1) / 13;
+                        point = (p1card + 1) % 13;
+                        if(hanairo == 0)
+                        {
+                            MessageBox.Show("黑桃"+$"{point}", "底牌", MessageBoxButtons.OK);
+                        }
+                        else if(hanairo == 1)
+                        {
+                            if (point == 0)
+                            {
+                                MessageBox.Show("黑桃13", "底牌", MessageBoxButtons.OK);
+                            }
+                            else
+                                MessageBox.Show("愛心" + $"{point}", "底牌", MessageBoxButtons.OK);
+                        }
+                        else if(hanairo == 2)
+                        {
+                            if (point == 0)
+                            {
+                                MessageBox.Show("愛心13", "底牌", MessageBoxButtons.OK);
+                            }
+                            else
+                                MessageBox.Show("方塊" + $"{point}", "底牌", MessageBoxButtons.OK);
+                        }
+                        else if(hanairo == 3)
+                        {
+                            if (point == 0)
+                            {
+                                MessageBox.Show("方塊13", "底牌", MessageBoxButtons.OK);
+                            }
+                            else
+                                MessageBox.Show("梅花" + $"{point}", "底牌", MessageBoxButtons.OK);
+                        }
+                        else
+                            MessageBox.Show("梅花13", "底牌", MessageBoxButtons.OK);
+                        p1.Image = list[52];
                         break;
                     }
             }
