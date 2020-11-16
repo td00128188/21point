@@ -24,7 +24,7 @@ namespace _21point
         int ppoint = 0;
         int cpoint = 0;
         int handcards = 2;
-        // 能要牌 要牌機制要做
+        // 能要牌 要牌機制要做 
         public Form1()
         {
             InitializeComponent();
