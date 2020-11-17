@@ -18,12 +18,14 @@ namespace _21point
         Random deck = new Random();
         int [] poker = new int [52];
         int startchack = 0;
-        int p1card;
         int c1card;
         int nowdeck = 0;
-        int ppoint = 0;
-        int cpoint = 0;
         int handcards = 2;
+        int ppoint;
+        int cpoint;
+        int pa;
+        int ca;
+        int x;
         public Form1()
         {
             InitializeComponent();
@@ -83,7 +85,24 @@ namespace _21point
             list.Add(Resources._51);
             list.Add(Resources._52);
             list.Add(Resources._00);
+            deckp.Image = list[52];
+            test.Text = "";
+        }
 
+        private void start_Click(object sender, EventArgs e)//開始
+        {
+            pa = 0;
+            ca = 0;
+            ppoint = 0;
+            cpoint = 0;
+            nowdeck = 0;
+            handcards = 2;
+            p3.Image = null;
+            p4.Image = null;
+            p5.Image = null;
+            c3.Image = null;
+            c4.Image = null;
+            c5.Image = null;
             for (int i = 0; i < 52; i++)
             {
                 poker[i] = deck.Next(0, 52);
@@ -96,77 +115,100 @@ namespace _21point
                     }
                 }
             }
-            deckp.Image = list[52];
             test.Text = "";
-        }
-
-        private void start_Click(object sender, EventArgs e)
-        {
-            switch (startchack)
+            p1.Image = list[poker[nowdeck]];
+            x = (poker[nowdeck] + 1) % 13;
+            if(x == 0 | x >= 10)
             {
-                case 0:
-                    {
-                        test.Text = "";
-                        p1.Image = list[52];
-                        c1.Image = list[52];
-                        p1card = poker[nowdeck];
-                        nowdeck += 1;                        
-                        c1card = poker[nowdeck];
-                        nowdeck += 1;
-                        p2.Image = list[poker[nowdeck]];
-                        nowdeck += 1;
-                        this.Controls.Add(p2);
-                        p2.BringToFront();
-                        c2.Image = list[poker[nowdeck]];
-                        nowdeck += 1;
-                        this.Controls.Add(c2);
-                        c2.BringToFront();
-                        startchack = 1;
-                        break;
-                    }
-                case 1:
-                    {
-                        ppoint = 0;
-                        cpoint = 0;
-                        nowdeck = 0;
-                        handcards = 2;
-                        p3.Image = null;
-                        p4.Image = null;
-                        p5.Image = null;
-                        c3.Image = null;
-                        c4.Image = null;
-                        c5.Image = null;
-                        for (int i = 0; i < 52; i++)
-                        {
-                            poker[i] = deck.Next(0, 52);
-                            for (int j = 0; j < i; j++)
-                            {
-                                while (poker[j] == poker[i])
-                                {
-                                    j = 0;
-                                    poker[i] = deck.Next(0, 52);
-                                }
-                            }
-                        }
-                        p1card = poker[nowdeck];
-                        nowdeck += 1;
-                        c1card = poker[nowdeck];
-                        nowdeck += 1;
-                        p2.Image = list[poker[nowdeck]];
-                        nowdeck += 1;
-                        this.Controls.Add(p2);
-                        p2.BringToFront();
-                        c2.Image = list[poker[nowdeck]];
-                        nowdeck += 1;
-                        this.Controls.Add(c2);
-                        c2.BringToFront();
-                        break;
-                    }
+                ppoint = ppoint + 10;
             }
+            else if(x == 1)
+            {
+                ppoint = ppoint + 11;
+                pa = 1;
+            }
+            else
+            {
+                ppoint = ppoint + x;
+            }
+            nowdeck += 1;
+            c2.Image = list[poker[nowdeck]];
+            x = (poker[nowdeck] + 1) % 13;
+            if (x == 0 | x >= 10)
+            {
+                cpoint = cpoint + 10;
+            }
+            else if (x == 1)
+            {
+                cpoint = cpoint + 11;
+                ca = 1;
+            }
+            else
+            {
+                cpoint = cpoint + x;
+            }
+            this.Controls.Add(c2);
+            c2.BringToFront();
+            nowdeck += 1;
+            p2.Image = list[poker[nowdeck]];
+            x = (poker[nowdeck] + 1) % 13;
+            if (x == 0 | x >= 10)
+            {
+                ppoint = ppoint + 10;
+            }
+            else if (x == 1)
+            {              
+                if(pa == 1)
+                {
+                    ppoint = ppoint + 1;
+                }
+                else
+                {
+                    ppoint = ppoint + 11;
+                    pa = 1;
+                }
+            }
+            else
+            {
+                ppoint = ppoint + x;
+            }
+            this.Controls.Add(p2);
+            p2.BringToFront();
+            nowdeck += 1;
+            c1.Image = list[52];
+            c1card = poker[nowdeck];
+            x = (poker[nowdeck] + 1) % 13;
+            if (x == 0 | x >= 10)
+            {
+                cpoint = cpoint + 10;
+            }
+            else if (x == 1)
+            {
+                if(ca == 1)
+                {
+                    cpoint = cpoint + 1;
+                }
+                else
+                {
+                    cpoint = cpoint + 11;
+                    ca = 1;
+                }
 
+            }
+            else
+            {
+                cpoint = cpoint + x;
+            }
+            s.Text = $"{ppoint}";
+            if(ppoint == 21)
+            {
+                MessageBox.Show("Black Jeck","", MessageBoxButtons.OK);
+            }
+            nowdeck += 1;           
+            startchack = 1;           
         }
 
-        private void bt1_Click(object sender, EventArgs e)
+        private void bt1_Click(object sender, EventArgs e)//HIT
         {
             switch (startchack)
             {
@@ -182,28 +224,163 @@ namespace _21point
                             case 2:
                                 {
                                     p3.Image = list[poker[nowdeck]];
+                                    x = (poker[nowdeck] + 1) % 13;
+                                    if (x == 0 | x >= 10)
+                                    {
+                                        ppoint = ppoint + 10;
+                                        if(pa == 1)
+                                        {
+                                            ppoint = ppoint - 10;
+                                            pa = 0;
+                                        }
+                                    }
+                                    else if (x == 1)
+                                    {
+                                        if(pa == 0)
+                                        {
+                                            ppoint = ppoint + 11;
+                                            pa = 1;
+                                            if (ppoint > 21)
+                                            {
+                                                ppoint = ppoint - 10;
+                                                pa = 0;
+                                            }
+                                        }
+                                        else
+                                        {
+                                            ppoint = ppoint + 1;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        if(pa == 0)
+                                        {
+                                            ppoint = ppoint + x;
+                                        }
+                                        else
+                                        {
+                                            ppoint = ppoint + x;
+                                            if (ppoint > 21)
+                                            {
+                                                ppoint = ppoint - 10;
+                                                pa = 0;
+                                            }
+                                        }
+                                    }
+                                    s.Text = $"{ppoint}";
                                     this.Controls.Add(p3);
                                     p3.BringToFront();
                                     nowdeck += 1;
                                     handcards += 1;
+                                    if (ppoint > 21)
+                                    {
+                                        MessageBox.Show("爆牌", "", MessageBoxButtons.OK);
+                                    }
                                     break;
                                 }
                             case 3:
                                 {
                                     p4.Image = list[poker[nowdeck]];
+                                    x = (poker[nowdeck] + 1) % 13;
+                                    if (x == 0 | x >= 10)
+                                    {
+                                        ppoint = ppoint + 10;
+                                        if (pa == 1)
+                                        {
+                                            ppoint = ppoint - 10;
+                                            pa = 0;
+                                        }
+                                    }
+                                    else if (x == 1)
+                                    {
+                                        if(pa == 0)
+                                        {
+                                            ppoint = ppoint + 11;
+                                            pa = 1;
+                                            if (ppoint > 21)
+                                            {
+                                                ppoint = ppoint - 10;
+                                                pa = 0;
+                                            }
+                                        }
+                                        else
+                                        {
+                                            ppoint = ppoint + 1;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        if(pa == 0)
+                                        {
+                                            ppoint = ppoint + x;
+                                        }
+                                        else
+                                        {
+                                            ppoint = ppoint + x;
+                                            if (ppoint > 21)
+                                            {
+                                                ppoint = ppoint - 10;
+                                                pa = 0;
+                                            }
+                                        }
+                                    }
+                                    s.Text = $"{ppoint}";
                                     this.Controls.Add(p4);
                                     p4.BringToFront();
                                     nowdeck += 1;
                                     handcards += 1;
+                                    if (ppoint > 21)
+                                    {
+                                        MessageBox.Show("爆牌", "", MessageBoxButtons.OK);
+                                    }
                                     break;
                                 }
                             case 4:
                                 {
                                     p5.Image = list[poker[nowdeck]];
+                                    x = (poker[nowdeck] + 1) % 13;
+                                    if (x == 0 | x >= 10)
+                                    {
+                                        ppoint = ppoint + 10;
+                                        if (pa == 1)
+                                        {
+                                            ppoint = ppoint - 10;
+                                            pa = 0;
+                                        }
+                                    }
+                                    else if (x == 1)
+                                    {
+                                        ppoint = ppoint + 1;
+                                    }
+                                    else
+                                    {
+                                        if(pa == 0)
+                                        {
+                                            ppoint = ppoint + x;
+                                        }
+                                        else
+                                        {
+                                            ppoint = ppoint + x;
+                                            if (ppoint > 21)
+                                            {
+                                                ppoint = ppoint - 10;
+                                                pa = 0;
+                                            }
+                                        }
+                                    }
+                                    s.Text = $"{ppoint}";
                                     this.Controls.Add(p5);
                                     p5.BringToFront();
                                     nowdeck += 1;
                                     handcards += 1;
+                                    if(ppoint <= 21)
+                                    {
+                                        MessageBox.Show("過五關","",MessageBoxButtons.OK);
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("爆牌", "", MessageBoxButtons.OK);
+                                    }
                                     break;
                                 }
                         }
@@ -212,7 +389,7 @@ namespace _21point
             }
         }
 
-        private void bt2_Click(object sender, EventArgs e)
+        private void bt2_Click(object sender, EventArgs e)//STAND
         {
             switch (startchack)
             {
@@ -224,61 +401,6 @@ namespace _21point
                 case 1:
                     {
 
-                        break;
-                    }
-            }
-        }
-
-        private void bt3_Click(object sender, EventArgs e)
-        {
-            switch (startchack)
-            {
-                case 0:
-                    {
-                        test.Text = "請先按開始";
-                        break;
-                    }
-                case 1:
-                    {
-                        p1.Image = list[p1card];
-                        int hanairo;
-                        int point;
-                        hanairo = (p1card + 1) / 13;
-                        point = (p1card + 1) % 13;
-                        if(hanairo == 0)
-                        {
-                            MessageBox.Show("黑桃"+$"{point}", "底牌", MessageBoxButtons.OK);
-                        }
-                        else if(hanairo == 1)
-                        {
-                            if (point == 0)
-                            {
-                                MessageBox.Show("黑桃13", "底牌", MessageBoxButtons.OK);
-                            }
-                            else
-                                MessageBox.Show("愛心" + $"{point}", "底牌", MessageBoxButtons.OK);
-                        }
-                        else if(hanairo == 2)
-                        {
-                            if (point == 0)
-                            {
-                                MessageBox.Show("愛心13", "底牌", MessageBoxButtons.OK);
-                            }
-                            else
-                                MessageBox.Show("方塊" + $"{point}", "底牌", MessageBoxButtons.OK);
-                        }
-                        else if(hanairo == 3)
-                        {
-                            if (point == 0)
-                            {
-                                MessageBox.Show("方塊13", "底牌", MessageBoxButtons.OK);
-                            }
-                            else
-                                MessageBox.Show("梅花" + $"{point}", "底牌", MessageBoxButtons.OK);
-                        }
-                        else
-                            MessageBox.Show("梅花13", "底牌", MessageBoxButtons.OK);
-                        p1.Image = list[52];
                         break;
                     }
             }
