@@ -275,6 +275,7 @@ namespace _21point
                                     if (ppoint > 21)
                                     {
                                         MessageBox.Show("爆牌", "", MessageBoxButtons.OK);
+                                        startchack = 0;
                                     }
                                     break;
                                 }
@@ -332,6 +333,7 @@ namespace _21point
                                     if (ppoint > 21)
                                     {
                                         MessageBox.Show("爆牌", "", MessageBoxButtons.OK);
+                                        startchack = 0;
                                     }
                                     break;
                                 }
@@ -376,10 +378,12 @@ namespace _21point
                                     if(ppoint <= 21)
                                     {
                                         MessageBox.Show("過五關","",MessageBoxButtons.OK);
+                                        startchack = 0;
                                     }
                                     else
                                     {
                                         MessageBox.Show("爆牌", "", MessageBoxButtons.OK);
+                                        startchack = 0;
                                     }
                                     break;
                                 }
@@ -400,7 +404,10 @@ namespace _21point
                     }
                 case 1:
                     {
-
+                        while(cpoint < 17)
+                        {
+                            
+                        }
                         break;
                     }
             }
