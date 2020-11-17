@@ -47,6 +47,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.test = new System.Windows.Forms.Label();
             this.s = new System.Windows.Forms.Label();
+            this.C = new System.Windows.Forms.Label();
+            this.p6 = new System.Windows.Forms.PictureBox();
+            this.CC = new System.Windows.Forms.Label();
+            this.SS = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.p1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.c1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.p2)).BeginInit();
@@ -58,6 +62,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.c4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.c5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deckp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.p6)).BeginInit();
             this.SuspendLayout();
             // 
             // p1
@@ -82,7 +87,7 @@
             // 
             // p2
             // 
-            this.p2.Location = new System.Drawing.Point(142, 76);
+            this.p2.Location = new System.Drawing.Point(142, 62);
             this.p2.Margin = new System.Windows.Forms.Padding(2);
             this.p2.Name = "p2";
             this.p2.Size = new System.Drawing.Size(105, 150);
@@ -92,7 +97,7 @@
             // 
             // p3
             // 
-            this.p3.Location = new System.Drawing.Point(142, 122);
+            this.p3.Location = new System.Drawing.Point(142, 93);
             this.p3.Margin = new System.Windows.Forms.Padding(2);
             this.p3.Name = "p3";
             this.p3.Size = new System.Drawing.Size(105, 150);
@@ -102,7 +107,7 @@
             // 
             // p4
             // 
-            this.p4.Location = new System.Drawing.Point(142, 168);
+            this.p4.Location = new System.Drawing.Point(142, 124);
             this.p4.Margin = new System.Windows.Forms.Padding(2);
             this.p4.Name = "p4";
             this.p4.Size = new System.Drawing.Size(105, 150);
@@ -112,7 +117,7 @@
             // 
             // p5
             // 
-            this.p5.Location = new System.Drawing.Point(142, 216);
+            this.p5.Location = new System.Drawing.Point(142, 154);
             this.p5.Margin = new System.Windows.Forms.Padding(2);
             this.p5.Name = "p5";
             this.p5.Size = new System.Drawing.Size(105, 150);
@@ -122,7 +127,7 @@
             // 
             // c2
             // 
-            this.c2.Location = new System.Drawing.Point(270, 76);
+            this.c2.Location = new System.Drawing.Point(270, 62);
             this.c2.Margin = new System.Windows.Forms.Padding(2);
             this.c2.Name = "c2";
             this.c2.Size = new System.Drawing.Size(105, 150);
@@ -132,7 +137,7 @@
             // 
             // c3
             // 
-            this.c3.Location = new System.Drawing.Point(270, 122);
+            this.c3.Location = new System.Drawing.Point(270, 93);
             this.c3.Margin = new System.Windows.Forms.Padding(2);
             this.c3.Name = "c3";
             this.c3.Size = new System.Drawing.Size(105, 150);
@@ -142,7 +147,7 @@
             // 
             // c4
             // 
-            this.c4.Location = new System.Drawing.Point(270, 168);
+            this.c4.Location = new System.Drawing.Point(270, 124);
             this.c4.Margin = new System.Windows.Forms.Padding(2);
             this.c4.Name = "c4";
             this.c4.Size = new System.Drawing.Size(105, 150);
@@ -152,7 +157,7 @@
             // 
             // c5
             // 
-            this.c5.Location = new System.Drawing.Point(270, 216);
+            this.c5.Location = new System.Drawing.Point(270, 154);
             this.c5.Margin = new System.Windows.Forms.Padding(2);
             this.c5.Name = "c5";
             this.c5.Size = new System.Drawing.Size(105, 150);
@@ -226,7 +231,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 22);
             this.label2.TabIndex = 15;
-            this.label2.Text = "玩家";
+            this.label2.Text = "閒家";
             // 
             // label3
             // 
@@ -254,17 +259,61 @@
             // 
             this.s.AutoSize = true;
             this.s.Font = new System.Drawing.Font("新細明體", 16F);
-            this.s.Location = new System.Drawing.Point(411, 371);
+            this.s.Location = new System.Drawing.Point(411, 93);
             this.s.Name = "s";
             this.s.Size = new System.Drawing.Size(98, 22);
             this.s.TabIndex = 19;
-            this.s.Text = "點數大小";
+            this.s.Text = "玩家籌碼";
+            // 
+            // C
+            // 
+            this.C.AutoSize = true;
+            this.C.Font = new System.Drawing.Font("新細明體", 16F);
+            this.C.Location = new System.Drawing.Point(411, 31);
+            this.C.Name = "C";
+            this.C.Size = new System.Drawing.Size(98, 22);
+            this.C.TabIndex = 20;
+            this.C.Text = "莊家籌碼";
+            // 
+            // p6
+            // 
+            this.p6.Location = new System.Drawing.Point(142, 185);
+            this.p6.Margin = new System.Windows.Forms.Padding(2);
+            this.p6.Name = "p6";
+            this.p6.Size = new System.Drawing.Size(105, 150);
+            this.p6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.p6.TabIndex = 21;
+            this.p6.TabStop = false;
+            // 
+            // CC
+            // 
+            this.CC.AutoSize = true;
+            this.CC.Font = new System.Drawing.Font("新細明體", 16F);
+            this.CC.Location = new System.Drawing.Point(411, 62);
+            this.CC.Name = "CC";
+            this.CC.Size = new System.Drawing.Size(60, 22);
+            this.CC.TabIndex = 22;
+            this.CC.Text = "10000";
+            // 
+            // SS
+            // 
+            this.SS.AutoSize = true;
+            this.SS.Font = new System.Drawing.Font("新細明體", 16F);
+            this.SS.Location = new System.Drawing.Point(411, 124);
+            this.SS.Name = "SS";
+            this.SS.Size = new System.Drawing.Size(60, 22);
+            this.SS.TabIndex = 23;
+            this.SS.Text = "10000";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(559, 465);
+            this.Controls.Add(this.SS);
+            this.Controls.Add(this.CC);
+            this.Controls.Add(this.p6);
+            this.Controls.Add(this.C);
             this.Controls.Add(this.s);
             this.Controls.Add(this.test);
             this.Controls.Add(this.label3);
@@ -299,6 +348,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.c4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.c5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deckp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.p6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -325,6 +375,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label test;
         private System.Windows.Forms.Label s;
+        private System.Windows.Forms.Label C;
+        private System.Windows.Forms.PictureBox p6;
+        private System.Windows.Forms.Label CC;
+        private System.Windows.Forms.Label SS;
     }
 }
 
