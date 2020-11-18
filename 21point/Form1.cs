@@ -199,12 +199,191 @@ namespace _21point
             {
                 cpoint = cpoint + x;
             }
+            nowdeck += 1;
+            startchack = 1;
+            int bj = 0;
             if (ppoint == 21)
             {
                 MessageBox.Show("Black Jeck","", MessageBoxButtons.OK);
+                bj = 1;
             }
-            nowdeck += 1;           
-            startchack = 1;           
+            while(bj == 1)
+            {
+                int card5 = 0;
+                int chit = 1;
+                for (int i = 0; i < chit; i++)
+                {
+                    if (cpoint < 17 & chit == 1)
+                    {
+                        c3.Image = list[poker[nowdeck]];
+                        this.Controls.Add(c3);
+                        c3.BringToFront();
+                        x = (poker[nowdeck] + 1) % 13;
+                        if (x == 0 | x >= 10)
+                        {
+                            cpoint = cpoint + 10;
+                            if (ca == 1)
+                            {
+                                cpoint = cpoint - 10;
+                                ca = 0;
+                            }
+                        }
+                        else if (x == 1)
+                        {
+                            if (ca == 0)
+                            {
+                                cpoint = cpoint + 11;
+                                ca = 1;
+                                if (cpoint > 21)
+                                {
+                                    cpoint = cpoint - 10;
+                                    ca = 0;
+                                }
+                            }
+                            else
+                            {
+                                cpoint = cpoint + 1;
+                            }
+                        }
+                        else
+                        {
+                            if (ca == 0)
+                            {
+                                cpoint = cpoint + x;
+                            }
+                            else
+                            {
+                                cpoint = cpoint + x;
+                                if (cpoint > 21)
+                                {
+                                    cpoint = cpoint - 10;
+                                    ca = 0;
+                                }
+                            }
+                        }
+                        nowdeck += 1;
+                        chit += 1;
+                    }
+                    else if (cpoint < 17 & chit == 2)
+                    {
+                        c4.Image = list[poker[nowdeck]];
+                        this.Controls.Add(c4);
+                        c4.BringToFront();
+                        x = (poker[nowdeck] + 1) % 13;
+                        if (x == 0 | x >= 10)
+                        {
+                            cpoint = cpoint + 10;
+                            if (ca == 1)
+                            {
+                                cpoint = cpoint - 10;
+                                ca = 0;
+                            }
+                        }
+                        else if (x == 1)
+                        {
+                            if (ca == 0)
+                            {
+                                cpoint = cpoint + 11;
+                                ca = 1;
+                                if (cpoint > 21)
+                                {
+                                    cpoint = cpoint - 10;
+                                    ca = 0;
+                                }
+                            }
+                            else
+                            {
+                                cpoint = cpoint + 1;
+                            }
+                        }
+                        else
+                        {
+                            if (ca == 0)
+                            {
+                                cpoint = cpoint + x;
+                            }
+                            else
+                            {
+                                cpoint = cpoint + x;
+                                if (cpoint > 21)
+                                {
+                                    cpoint = cpoint - 10;
+                                    ca = 0;
+                                }
+                            }
+                        }
+                        nowdeck += 1;
+                        chit += 1;
+                    }
+                    else if (cpoint < 17 & chit == 3)
+                    {
+                        c5.Image = list[poker[nowdeck]];
+                        this.Controls.Add(c5);
+                        c5.BringToFront();
+                        x = (poker[nowdeck] + 1) % 13;
+                        if (x == 0 | x >= 10)
+                        {
+                            cpoint = cpoint + 10;
+                            if (ca == 1)
+                            {
+                                cpoint = cpoint - 10;
+                                ca = 0;
+                            }
+                        }
+                        else if (x == 1)
+                        {
+                            cpoint = cpoint + 1;
+                        }
+                        else
+                        {
+                            if (ca == 0)
+                            {
+                                cpoint = cpoint + x;
+                            }
+                            else
+                            {
+                                cpoint = cpoint + x;
+                                if (cpoint > 21)
+                                {
+                                    cpoint = cpoint - 10;
+                                    ca = 0;
+                                }
+                            }
+                        }
+                        nowdeck += 1;
+                        chit += 1;
+                        if (cpoint < 21)
+                        {
+                            MessageBox.Show("過五關，莊家勝", "", MessageBoxButtons.OK);
+                            card5 = 1;
+                            startchack = 0;
+                        }
+                    }
+                }
+                c1.Image = list[poker[3]];
+                while (card5 == 0 & cpoint <= 21)
+                {
+                    if (cpoint == ppoint)
+                    {
+                        MessageBox.Show("平手", "點數比較結果", MessageBoxButtons.OK);
+                    }
+                    else if (cpoint > ppoint)
+                    {
+                        MessageBox.Show("莊家大  ", "點數比較結果", MessageBoxButtons.OK);
+                    }
+                    else
+                    {
+                        MessageBox.Show("閒家大", "點數比較結果", MessageBoxButtons.OK);
+                    }
+                    break;
+                }
+                if (cpoint > 21)
+                {
+                    MessageBox.Show("莊家爆牌，閒家勝", "點數比較結果", MessageBoxButtons.OK);
+                }
+                startchack = 0;
+                break;
+            }
         }
 
         private void bt1_Click(object sender, EventArgs e)//HIT
@@ -272,7 +451,7 @@ namespace _21point
                                     handcards += 1;
                                     if (ppoint > 21)
                                     {
-                                        MessageBox.Show("爆牌", "", MessageBoxButtons.OK);
+                                        MessageBox.Show("閒家爆牌，莊家勝", "", MessageBoxButtons.OK);
                                         startchack = 0;
                                     }
                                     break;
@@ -329,7 +508,7 @@ namespace _21point
                                     handcards += 1;
                                     if (ppoint > 21)
                                     {
-                                        MessageBox.Show("爆牌", "", MessageBoxButtons.OK);
+                                        MessageBox.Show("閒家爆牌，莊家勝", "", MessageBoxButtons.OK);
                                         startchack = 0;
                                     }
                                     break;
@@ -386,7 +565,7 @@ namespace _21point
                                     handcards += 1;
                                     if(ppoint > 21)
                                     {
-                                        MessageBox.Show("爆牌", "", MessageBoxButtons.OK);
+                                        MessageBox.Show("閒家爆牌，莊家勝", "", MessageBoxButtons.OK);
                                         startchack = 0;
                                     }
                                     break;
@@ -443,7 +622,7 @@ namespace _21point
                                     handcards += 1;
                                     if (ppoint > 21)
                                     {
-                                        MessageBox.Show("爆牌", "", MessageBoxButtons.OK);
+                                        MessageBox.Show("閒家爆牌，莊家勝", "", MessageBoxButtons.OK);
                                         startchack = 0;
                                     }
                                     break;
@@ -610,14 +789,14 @@ namespace _21point
                                 chit += 1;
                                 if (cpoint < 21)
                                 {
-                                    MessageBox.Show("過五關", "", MessageBoxButtons.OK);
+                                    MessageBox.Show("過五關，莊家勝", "", MessageBoxButtons.OK);
                                     card5 = 1;
                                     startchack = 0;
                                 }
                             }
                         }
                         c1.Image = list[poker[3]];
-                        while(card5 == 0)
+                        while(card5 == 0 & cpoint <= 21)
                         {
                             if (cpoint == ppoint)
                             {
@@ -625,13 +804,17 @@ namespace _21point
                             }
                             else if (cpoint > ppoint)
                             {
-                                MessageBox.Show("莊家大", "點數比較結果", MessageBoxButtons.OK);
+                                MessageBox.Show("莊家大  ", "點數比較結果", MessageBoxButtons.OK);
                             }
                             else
                             {
                                 MessageBox.Show("閒家大", "點數比較結果", MessageBoxButtons.OK);
                             }
                             break;
+                        }
+                        if(cpoint > 21)
+                        {
+                            MessageBox.Show("莊家爆牌，閒家勝", "點數比較結果", MessageBoxButtons.OK);
                         }
                         startchack = 0;
                         break;
