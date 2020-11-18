@@ -85,6 +85,7 @@ namespace _21point
             list.Add(Resources._51);
             list.Add(Resources._52);
             list.Add(Resources._00);
+            list.Add(Resources.期中設計稿);
             deckp.Image = list[52];
             test.Text = "";
         }
@@ -820,6 +821,16 @@ namespace _21point
                         break;
                     }
             }
+        }
+
+        private void bbtt1_Click(object sender, EventArgs e)
+        {
+            pb0.Image = list[53];
+        }
+
+        private void bbtt2_Click(object sender, EventArgs e)
+        {
+            pb0.Image = null;
         }
     }
 }

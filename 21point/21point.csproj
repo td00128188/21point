@@ -238,5 +238,8 @@
   <ItemGroup>
     <None Include="Resources\52.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\期中設計稿.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
